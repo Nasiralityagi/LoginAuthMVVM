@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true"
+          android:drawable="@drawable/checked_icon_google" />
+    <item android:drawable="@drawable/google_icon" />
+</selector>

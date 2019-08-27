@@ -1,0 +1,74 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">20dp</dimen>
+    <dimen name="activity_vertical_margin">20dp</dimen>
+    <dimen name="navigation_width">130.00dp</dimen>
+    <dimen name="navigation_height">100.00dp</dimen>
+    <dimen name="main_slider_height">210.00dp</dimen>
+    <dimen name="logout_h_w">210.00dp</dimen>
+    <dimen name="genre_w">80.00dp</dimen>
+    <dimen name="genre_h">90.00dp</dimen>
+    <dimen name="genre_ic_h_w">50.00dp</dimen>
+    <dimen name="home_view_w">200dp</dimen>
+    <dimen name="home_view_h">130dp</dimen>
+
+    <dimen name="margin_0">0.00dp</dimen>
+    <dimen name="margin_1">1.00dp</dimen>
+    <dimen name="margin_2">2.00dp</dimen>
+    <dimen name="margin_3">3.00dp</dimen>
+    <dimen name="margin_4">4.00dp</dimen>
+    <dimen name="margin_5">5.00dp</dimen>
+    <dimen name="margin_6">6.00dp</dimen>
+    <dimen name="margin_7">7.00dp</dimen>
+    <dimen name="margin_8">8.00dp</dimen>
+    <dimen name="margin_9">9.00dp</dimen>
+    <dimen name="margin_10">10.00dp</dimen>
+    <dimen name="margin_11">11.00dp</dimen>
+    <dimen name="margin_12">12.00dp</dimen>
+    <dimen name="margin_13">13.00dp</dimen>
+    <dimen name="margin_14">14.00dp</dimen>
+    <dimen name="margin_15">15.00dp</dimen>
+    <dimen name="margin_16">16.00dp</dimen>
+    <dimen name="margin_17">17.00dp</dimen>
+    <dimen name="margin_18">18.00dp</dimen>
+    <dimen name="margin_19">19.00dp</dimen>
+    <dimen name="margin_20">20.00dp</dimen>
+    <dimen name="margin_23">23.00dp</dimen>
+    <dimen name="margin_24">24.00dp</dimen>
+    <dimen name="margin_25">25.00dp</dimen>
+    <dimen name="margin_26">26.00dp</dimen>
+    <dimen name="margin_27">27.00dp</dimen>
+    <dimen name="margin_28">28.00dp</dimen>
+    <dimen name="margin_30">30.00dp</dimen>
+    <dimen name="margin_35">35.00dp</dimen>
+    <dimen name="margin_36">36.00dp</dimen>
+    <dimen name="margin_38">38.00dp</dimen>
+    <dimen name="margin_40">40.00dp</dimen>
+    <dimen name="margin_42">42.00dp</dimen>
+    <dimen name="margin_45">45.00dp</dimen>
+    <dimen name="margin_46">46.00dp</dimen>
+    <dimen name="margin_50">50.00dp</dimen>
+    <dimen name="margin_52">52.00dp</dimen>
+    <dimen name="margin_56">56.00dp</dimen>
+    <dimen name="margin_60">60.00dp</dimen>
+    <dimen name="margin_65">65.00dp</dimen>
+    <dimen name="margin_70">70.00dp</dimen>
+    <dimen name="margin_72">72.00dp</dimen>
+    <dimen name="margin_80">80.00dp</dimen>
+    <dimen name="margin_87">87.00dp</dimen>
+    <dimen name="margin_95">95.00dp</dimen>
+    <dimen name="margin_100">100.00dp</dimen>
+    <dimen name="margin_120">120.00dp</dimen>
+    <dimen name="margin_140">140.00dp</dimen>
+    <dimen name="margin_150">150.00dp</dimen>
+    <dimen name="margin_175">175.00dp</dimen>
+    <dimen name="margin_200">200.00dp</dimen>
+    <dimen name="margin_206">206.00dp</dimen>
+    <dimen name="margin_230">230.00dp</dimen>
+    <dimen name="margin_240">240.00dp</dimen>
+    <dimen name="margin_260">260.00dp</dimen>
+    <dimen name="margin_300">300.00dp</dimen>
+
+    <dimen name="minus50">-50dp</dimen>
+
+</resources>

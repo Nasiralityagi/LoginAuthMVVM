@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable name="model"
+                  type="com.nesstech.loginauthmvvm.model.LoginViewModel"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/margin_16"
+            android:paddingRight="@dimen/margin_16">
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/image_01"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginRight="@dimen/margin_15"
+                android:layout_marginLeft="@dimen/margin_15"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/app_logo"
+                android:layout_width="@dimen/margin_56"
+                android:layout_height="@dimen/margin_56"
+                android:src="@drawable/ic_launcher"
+                app:layout_constraintLeft_toLeftOf="@+id/img_bg"
+                app:layout_constraintTop_toTopOf="@+id/img_bg"
+                android:layout_marginTop="@dimen/margin_50"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/app_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LOGO"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/margin_20"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                app:layout_constraintLeft_toRightOf="@+id/app_logo"
+                app:layout_constraintTop_toTopOf="@+id/app_logo"
+                app:layout_constraintBottom_toBottomOf="@+id/app_logo"/>
+
+        <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="@+id/img_bg"
+                app:layout_constraintRight_toRightOf="@+id/img_bg"
+                app:layout_constraintBottom_toTopOf="@+id/login_bg"
+                app:layout_constraintGuide_begin="@dimen/margin_175"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/login_bg"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/guideline"
+                app:layout_constraintBottom_toTopOf="@+id/butLogin"
+                android:background="@drawable/login_background"
+                android:paddingTop="@dimen/margin_10"
+                android:paddingBottom="@dimen/margin_10"
+                android:paddingRight="@dimen/margin_15"
+                android:paddingLeft="@dimen/margin_15"
+                android:elevation="@dimen/margin_2"
+                app:layout_constraintRight_toRightOf="@+id/img_bg"
+                app:layout_constraintLeft_toLeftOf="@+id/img_bg">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/login_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Login"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/margin_20"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/etemail"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/etemail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_8"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    app:boxStrokeColor="@color/cyan"
+                    android:textColorHint="@color/colorAccent"
+                    app:hintTextAppearance="@style/TextInputLayout"
+                    app:layout_constraintTop_toBottomOf="@+id/login_label"
+                    app:layout_constraintBottom_toTopOf="@+id/etpass"
+                    app:layout_constraintStart_toStartOf="@+id/login_label"
+                    app:layout_constraintEnd_toEndOf="@+id/login_label">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_50"
+                        android:textSize="@dimen/margin_15"
+                        android:hint="Email"
+                        android:ems="10"
+                        android:inputType="textNoSuggestions|textEmailAddress"
+                        android:imeOptions="actionNext"
+                        android:text="@={model.username}"
+                        android:onTextChanged="@{model::onEmailTextChanged}"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/etpass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_8"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    app:boxStrokeColor="@color/cyan"
+                    android:textColorHint="@color/colorAccent"
+                    app:hintTextAppearance="@style/TextInputLayout"
+                    app:layout_constraintTop_toBottomOf="@+id/etemail"
+                    app:layout_constraintStart_toStartOf="@+id/etemail"
+                    app:layout_constraintEnd_toEndOf="@+id/etemail"
+                    app:layout_constraintBottom_toTopOf="@+id/forget_password">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_50"
+                        android:id="@+id/etPass"
+                        android:textSize="@dimen/margin_15"
+                        android:hint="Password"
+                        android:inputType="textPassword"
+                        android:imeOptions="actionDone"
+                        android:text="@={model.password}"
+                        android:onTextChanged="@{model::onPasswordTextChanged}"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/forget_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Forgot password?"
+                    android:textColor="@color/cyan"
+                    android:textSize="@dimen/margin_13"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:padding="@dimen/margin_5"
+                    android:clickable="true"
+                    android:background="?android:selectableItemBackground"
+                    android:textStyle="bold"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/etpass"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/etpass"
+                    android:onClick="@{()->model.forget()}"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/butLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/margin_46"
+                android:layout_marginTop="@dimen/margin_10"
+                android:background="@drawable/login_button_bg"
+                android:gravity="center"
+                android:paddingStart="@dimen/margin_30"
+                android:layout_marginRight="@dimen/margin_3"
+                android:paddingEnd="@dimen/margin_30"
+                android:text="SIGNIN"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/margin_16"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/login_bg"
+                app:layout_constraintBottom_toTopOf="@+id/line1"
+                app:layout_constraintRight_toRightOf="@+id/login_bg"
+                android:onClick="@{()->model.login()}"/>
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/checkRemember"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@+id/butLogin"
+                app:layout_constraintBottom_toBottomOf="@id/butLogin"
+                app:layout_constraintLeft_toLeftOf="@+id/login_bg"
+                android:background="?android:selectableItemBackground"
+                android:text="Remember me"
+                android:textSize="@dimen/margin_12"
+                android:layout_marginLeft="@dimen/margin_15"
+                android:checked="@{model.rememberme}"
+                android:onClick="@{()->model.remember()}"/>
+
+        <androidx.core.widget.ContentLoadingProgressBar
+                android:id="@+id/progress"
+                style="?android:attr/progressBarStyleLargeInverse"
+                android:layout_width="@dimen/margin_30"
+                android:layout_height="@dimen/margin_30"
+                android:layout_marginRight="@dimen/margin_8"
+                app:layout_constraintTop_toTopOf="@+id/butLogin"
+                app:layout_constraintBottom_toBottomOf="@+id/butLogin"
+                app:layout_constraintRight_toLeftOf="@+id/butLogin"
+                android:indeterminate="true"
+                android:indeterminateTintMode="src_atop"
+                android:indeterminateTint="@color/blue"
+                android:visibility="@{model.progress}"/>
+
+        <View android:id="@+id/line1"
+              android:layout_width="@dimen/margin_260"
+              android:layout_height="0.1px"
+              app:layout_constraintTop_toBottomOf="@+id/butLogin"
+              app:layout_constraintBottom_toTopOf="@+id/imFb"
+              android:layout_marginTop="@dimen/margin_15"
+              android:background="@color/dark_gray"
+              app:layout_constraintEnd_toEndOf="@+id/butLogin"
+              app:layout_constraintStart_toStartOf="@+id/checkRemember"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/label_social"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Social Login"
+                android:background="@drawable/window_background"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:paddingLeft="@dimen/margin_15"
+                android:paddingRight="@dimen/margin_15"
+                app:layout_constraintLeft_toLeftOf="@+id/line1"
+                app:layout_constraintRight_toRightOf="@+id/line1"
+                app:layout_constraintTop_toTopOf="@+id/line1"
+                app:layout_constraintBottom_toBottomOf="@+id/line1"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/image_02"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <com.facebook.login.widget.LoginButton
+                xmlns:facebook="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/loginButton"
+                android:layout_width="@dimen/margin_50"
+                android:layout_height="@dimen/margin_50"
+                android:visibility="gone"
+                app:layout_constraintTop_toTopOf="@+id/imFb"
+                app:layout_constraintBottom_toBottomOf="@+id/imFb"
+                app:layout_constraintRight_toLeftOf="@+id/imFb"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imFb"
+                android:layout_width="@dimen/margin_50"
+                android:layout_height="@dimen/margin_50"
+                android:src="@drawable/ic_facebook"
+                android:layout_marginTop="@dimen/margin_10"
+                android:clickable="true"
+                android:padding="@dimen/margin_5"
+                android:layout_marginRight="@dimen/margin_40"
+                android:background="?android:selectableItemBackground"
+                app:layout_constraintBottom_toTopOf="@+id/new_user"
+                app:layout_constraintStart_toStartOf="@+id/label_social"
+                app:layout_constraintTop_toBottomOf="@+id/line1"
+                android:onClick="@{()->model.fbLogin()}"/>
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imGo"
+                android:layout_width="@dimen/margin_50"
+                android:layout_height="@dimen/margin_50"
+                android:src="@drawable/ic_google"
+                android:padding="@dimen/margin_5"
+                android:layout_marginLeft="@dimen/margin_40"
+                android:background="?android:selectableItemBackground"
+                app:layout_constraintTop_toTopOf="@+id/imFb"
+                app:layout_constraintBottom_toBottomOf="@+id/imFb"
+                app:layout_constraintEnd_toEndOf="@+id/label_social"
+                android:onClick="@{()->model.googleLogin()}"/>
+
+        <com.google.android.gms.common.SignInButton
+                android:id="@+id/btn_sign_in"
+                android:layout_width="@dimen/margin_50"
+                android:layout_height="@dimen/margin_50"
+                app:layout_constraintTop_toTopOf="@+id/imFb"
+                app:layout_constraintBottom_toBottomOf="@+id/imFb"
+                app:layout_constraintLeft_toRightOf="@+id/imGo"
+                android:text="@string/common_signin_button_text"
+                android:visibility="gone"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/new_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/string_sign_in_with"
+                android:textColor="@android:color/black"
+                android:padding="@dimen/margin_8"
+                android:clickable="true"
+                android:background="?android:selectableItemBackground"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:onClick="@{()->model.signUp()}"
+                app:layout_constraintStart_toStartOf="@+id/imFb"
+                app:layout_constraintEnd_toEndOf="@+id/imGo"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

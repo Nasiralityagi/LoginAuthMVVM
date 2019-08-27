@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MVVM</string>
+    <string name="facebook_app_id">1017139844989490</string>
+    <string name="fb_login_protocol_scheme">fb1017139844989490</string>
+    <string name="string_sign_in_with" formatted="false"><u>New User?
+        <font color='#1F7AEC'><b>SignUp</b></font></u>
+    </string>
+    <string name="login_successful">Successfully login.</string>
+    <string name="login_failed">Login failed!</string>
+</resources>
